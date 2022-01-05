@@ -1,0 +1,18 @@
+*{
+    /*Reseta as configuração que o navegador aplica por padrão
+     e aplica às que definimos */
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+p{
+    height: 20px;
+    width: auto;
+    border-bottom: 3px solid black;
+    padding: 2px 60px 30px 100px;
+    background-color: purple;
+    color: yellow;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+        }

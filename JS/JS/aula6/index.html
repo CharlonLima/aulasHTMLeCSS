@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //var e let e const os três são variavel GLOBAL
+    // porque mesmo o if estando num escopo separado
+    // é possível chamar a variavel
+
+    //var de qualquer lugar pode chamar, dentro e fora do escopo
+
+    //O let porém identifica o escopo que ele está e não é possível
+    //chamar uma variavel let fora do escopo em que ela esta
+    //let qq = "variavel let";
+
+    //A variável const não pode sofrer alteração no decorrer do código
+    //const variavelConstante =100;
+    //const variavelConstante =100;
+
+
+
+    // if(true){
+    //     console.log(variavelConstante);
+    //     var varDentroDoIf ="Estou dentro do if sou uma var";
+    //     let letDentroDoIf = "Sou uma let e estou dentro do if";
+    // }
+    // console.log(letDentroDoIf);
+
+
+
+    //Função, a abaixo tem nome, mas quando não tem nome ela é anonima
+        function soma(){
+            console.log(1+3);
+        }
+    //A linha abaixo soma(); deve ser escrita para chamar a função
+    //Tendo em vista que ela não autoexcutavel
+    //Mostra o resultado da operação abre e fecha parenteses
+        //
+    
+    function concatenarNome(){
+        var nome = "Charlon"; //local
+        var sobreNome = " Lima";
+        alert(nome+sobreNome);
+    }
+
+    //concatenarNome();
+
+    function novaConcatenarNomes(nome, sobreNome){
+        document.write(nome+" "+sobreNome);
+    }
+
+    novaConcatenarNomes("Charlon", " Lima");
+
+    let semNome = function(){
+        alert("Estou em uma função anonima");
+    }
+    //semNome();
+
+    let funComPars = function(idade, idadePar){
+        if(idade>idadePar){
+            alert("Voce tem idade maior que "+idadePar);
+        }else{
+            alert("Voce tem idade menor que "+idadePar);
+        }
+    }
+funComPars(20, 18);
+funComPars(17, 18);
+</script>
+<body>
+    
+</body>
+</html>

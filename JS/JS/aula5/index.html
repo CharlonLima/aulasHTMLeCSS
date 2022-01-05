@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*alert aparece uma mensagem*/
+   // alert("Olá mundo!");
+    /*prompt abre formulario para entrada de dados*/
+    //prompt("Digite alguma coisa");
+    /*confirm aparece uma mensagem*/
+    //confirm("Clique em um botão");
+//+concatena strings textos
+    //alert("Olá "+nome);
+
+    /*prompt vai abrir um formulario para entrada de dados e o que for digitado
+    irá ser armazenado na variavel nome*/
+    //var nome = prompt("Digite seu nome");
+
+    /*prompt vai abrir um formulario para entrada de dados E a pergunta
+    "Qual a sua cor favorita? " será concatenada com o que foi armazenado
+    na variável nome. e o que for digitado será armazenado na variavel cor*/
+    
+    /*tag <br> quebra a linha*/
+
+    // var cor = prompt("Qual a sua cor favorita? "+nome);
+
+    // /*document.write irá escrever no navegador o texto "Nome...: "
+    //  mais o que foi armazenado na variavel nome*/
+    // document.write("Nome...: "+ nome+"<br>");
+    // /*document.write irá escrever no navegador o texto "A cor favorita do "
+    //  mais o que foi armazenado na variavel nome e o texto " é " mais o que
+    //  foi armazenado na variavel cor*/
+    // document.write("A cor favorita do "+nome+" é "+cor+"<br>");
+
+    
+    //Verifica se o usuario clicou no ok ou no cancelar
+    // if (confirm("Clique em um botão")){
+    //     //console.log irá aparecer no devtools a mensagem "Você clicou no Ok"
+    //     //console.log("Você clicou no Ok");
+    //     document.write("Você clicou no Ok");
+    //     alert("Você clicou mesmo no Ok");
+    // }   else{
+    //     console.log("Você clicou no cancelar")
+    // }
+
+    var opcao = prompt("Digite 1 ou 2 para continuar");
+    console.log(opcao);
+
+    switch(opcao){
+        case "1":
+            var pergunta = confirm("Você pretende continuar a operação?");
+            if (pergunta){
+                alert("Parabéns você está ficando bom");
+            }   else{
+                alert("Poxa vida, você está aflito, não quer continuar");
+            }
+        //o break serve para ele parar aqui    
+        break;    
+        case "2":
+            var pergunta = confirm("Você é casado?");
+            if(pergunta){
+                var conj = prompt("Qual é o nome do seu conjuge");
+                alert("Parabéns por ser casado com o/(a) "+conj);
+            }
+        break;
+        default: console.log("Está opção não existe");
+        break;    
+    }
+    
+</script>
+<body>
+    
+</body>
+</html>

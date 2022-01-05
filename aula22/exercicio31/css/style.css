@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+header, main, footer{
+    width: 80%;
+    background-color: yellow;
+    /*o primeiro 10px é do topo, o segundo 10px é da base inferior,
+     e primeiro auto(refere-se a lateral direita)
+      e o segundo auto(refere-se a lateral esquerda)
+       os dois autos significa que ele ficara centralizado*/
+    margin: 10px auto 10px auto;
+}
+main{
+    /*auto o tamanho irá se adequar ao conteudo*/
+    height: auto;
+    
+
+}
+header{
+    height: 60px;
+}
+footer{
+    height: auto;
+}
+.ajusteTamanho{
+    height: 30vw;
+    background-color: green;
+}
+/*content-card>div quem estiver dentro do content-card e for uma div
+e quem estiver dentro do footer e for uma div ele vai assumir essas caracteristicas*/
+.content-card>div, footer>div{
+    width: 48%;
+    height: 200px;
+    background-color: darkred;
+    
+}
+.flex{
+display: flex;
+}
+.space-btw{
+    justify-content: space-between;
+}
+section{
+    margin: 10px 0 10px 0;
+    /*background-color: dodgerblue cor do meio*/
+    background-color: dodgerblue;
+}
+@media screen and (max-width: 700px){
+    body{
+        background-color: black;
+        /*de 700px para baixo irá mudar a cor do background*/
+    }
+    section{
+        height: auto;
+        flex-direction: column;
+    }
+    section.content-card>div{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

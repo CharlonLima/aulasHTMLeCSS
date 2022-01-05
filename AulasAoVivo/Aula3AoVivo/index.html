@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<script>
+    //window.onload já diz antecipadamente para o navegador que tem coisas para ele
+    //carregar. Então ele vai esperar o carregamento da página para iniciar o javscript
+    //Se não fosse o window.onload teriámos que colocar o javascript
+    //(lá no final do body) depois dos elementos html, já que o navegador lê
+    //linha por linha e não teria como ele mapear um elemento html que ele
+    //não chegou ainda
+    window.onload = function(){
+        const cxtNome = document.querySelector('#txtNome');
+        const btnEnviar = document.querySelector('#btnEnviar');
+        const tabela = document.querySelector("#tbListaNomes");
+
+        let nomes = [];
+        let idx = 0;
+        btnEnviar.addEventListener('click', ()=>{
+            if(cxtNome.value != ""){
+                nomes.push(cxtNome.value);
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                let tdCodigo = document.createElement('td');
+                let codigo = idx;
+                
+                tabela.appendChild(tr);//insere tag tr filho na tabela
+                tr.appendChild(tdCodigo).textContent = codigo+1;
+                tr.appendChild(td).innerHTML = nomes[idx];//insere a tag filho td na tag filho tr e escreve o que está no indice do array
+                
+                cxtNome.value = "";//Limpa a caixa de texto
+                idx++;
+            } else{
+                alert("Digite um nome válido");
+
+                //Manipulando o css no javascript
+                cxtNome.style.backgroundColor = 'red';
+            }
+        }
+        )
+        cxtNome.addEventListener('click', ()=>{
+            //quando clicar no formulario ele fica branco
+            cxtNome.style.backgroundColor = '#fff';
+        })
+    }
+
+    
+    
+</script>
+<body>
+    <main>
+        <div>
+            <form id="frmNome">
+                <label for="">Nome
+                    <input type="text" name="txtNome" id="txtNome" value="">
+                </label>
+                <input type="button" id="btnEnviar" name="btnEnviar" value="BUSCAR">
+            </form>
+
+            <table id="tbListaNomes">
+                <tr>
+                    <th>Código</th>
+                    <th>Lista Nomes</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+    
+</body>
+
+</html>

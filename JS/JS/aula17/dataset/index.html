@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Data Attributes</title>
+</head>
+<script>
+    //o codigo window.onload para manipular os elementos do html e
+    // o dom carregar tudo que preciso
+    //window.onload recebe uma função anonima
+    window.onload = function(){
+        //o primeiro elemento que será manipulado é o botão
+        //A linha abaixo mapea o elemento e carregar o elemento e vai
+        //colocar tudo na variavel const
+        //Aqui o nome da variavel const está igual, mas não é obrigatorio
+        const btnBuscar = document.querySelector("#btnBuscar");
+        const txtNomeCli = document.querySelector("#nomeCliente");
+
+        btnBuscar.addEventListener('click', function(){
+            //Criou uma variavel chamada dataSetCliente, que irá receber o valor
+            //da variavel txtNomeCli onde o manipulador do Dom mapeou e carregou todas as informações do html
+            //dataset.NomeDaId
+
+            //data attributes para nomes procure usar nomes minusculos
+            //dataset retorna as informações dos atributos com base no nome que foi colocado depois do data-
+            let dataSetCliente = txtNomeCli.dataset.codigo;
+            let dataSetStatus = txtNomeCli.dataset.statuscli;
+            
+            console.log(dataSetCliente);
+            console.log(dataSetStatus);
+        })}
+</script>
+<body>
+    <input type="text" data-codigo="38" data-statuscli="ativo" name="nomeCliente" value="Charlon A" id="nomeCliente">
+    <input type="button" value="BUSCAR" name="buscar" id="btnBuscar">
+</body>
+</html>

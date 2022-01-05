@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio30</title>
+</head>
+<style>
+    /*value é o que aparece dentro da caixa de texto só que não é oculto
+    quando o cursor do mouse é colocado*/
+    /*fieldset cria uma tabela com linha ao redor*/
+    /*password no type do input não exibe a senha*/
+    /*email no type do input requer o arroba@ no formulario para enviar*/
+</style>
+<body>
+    <form name="contato" method="post">
+        <fieldset>
+            <legend>Digite seu Email e Senha</legend>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required placeholder="Digite seu E-mail" name="email" value="">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" required placeholder="Digite sua senha" name="senha" value="">
+        </fieldset>
+        <input type="submit" value="Entrar">
+    </form>
+</body>
+</html>

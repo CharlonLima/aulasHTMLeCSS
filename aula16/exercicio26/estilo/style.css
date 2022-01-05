@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+:root{
+    --cor-fundo: rgb(33, 33, 33)
+    
+}
+body{
+    
+background-color: var(--cor-fundo);
+}
+div#elemento1{
+   
+    width: 150px;
+    height: 150px;
+    background-color: rgb(249, 168, 37);
+    border-radius: 100%;
+    /* margin:0 auto centraliza o elemento na página */
+    margin: 0  auto;
+   }
+div#elemento1:hover{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    cursor: pointer;
+}

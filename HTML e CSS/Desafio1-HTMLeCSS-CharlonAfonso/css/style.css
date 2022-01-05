@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+header, main, footer{
+    width: 100%;
+}
+header{
+    height: 40px;
+    background-color: #212121;
+    position: absolute;
+    top: 0;
+}
+header section#logo{
+    width: 40%;
+}
+header nav{
+    width: 60%;
+    flex-direction: column;
+}
+nav ul{
+    width: 70%;
+} 
+li#item1, li#item2, li#item3{ 
+    width: 40%;
+    height: 30px;
+}
+ul li#item1{
+    background-color:#f9a825;  
+}
+ul li#item2:hover{
+    background-color:red;
+    transition: 1s;   
+}
+ul li#item3:hover{
+    background-color: #f9a825;
+    transition: 1s; 
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+main section#section1{
+    width: 200px;
+    height: 200px;
+    border-right: 2px dotted black;
+    margin-left: 5px;
+    padding-right: 5px;
+}
+main section#section2{
+    width: 200px;
+    height: 270px;
+    margin-left: 5px;
+}
+#section2 input#formularioEmail{
+    width: 95%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#section2 input#botaoEntrar1{
+    width: 50%;
+    height: 25px;
+    background-color:#f9a825;
+    border: 3px solid black;
+    margin-top: 2px;
+}
+footer{
+    height: 80px;
+    background-color: #212121;
+    position: fixed;
+    bottom: 0;
+}
+p{
+    background-color: #EEEEEE;
+    line-height: 15px;
+}
+a{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+}
+.apareceHand{
+    cursor: pointer;
+}
+.centralizar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cordafonte{
+    color: white;
+}
+.tipoEtamanhoFonte{
+    font-family: helvetica;
+    font-size: clamp(0.6rem, 1.7vw, 2rem);
+}
+.bordasArredondadas{
+    border-radius: 15px;
+}
+.material-icons{
+    color: #f9a825;
+    font-size: 30px !important;
+}
+
+
+ 

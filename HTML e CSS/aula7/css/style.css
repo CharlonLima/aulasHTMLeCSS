@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+p{
+    height: 20px;
+    width: auto;
+    border-bottom: 3px solid black;
+    padding: 2px 60px 30px 100px;
+    background-color:firebrick;
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }

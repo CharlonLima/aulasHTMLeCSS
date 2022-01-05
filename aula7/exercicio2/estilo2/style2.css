@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: white;
+    background-color:rebeccapurple;
+    height: 50px;
+    width: auto;
+    border: 3px solid black;
+    padding: 15px 4px 5px 100px;
+}

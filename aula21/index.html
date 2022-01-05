@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA21</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: royalblue;
+
+    }
+    main{
+        margin: 50px auto;
+        height: auto;
+        width: 80%;
+        border: 2px dotted rebeccapurple;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: seashell;
+    }
+    h2{
+        font-size: 0.8em;
+        padding: 5px 0 9px 0;
+    }
+    .borda{
+        border: 1px solid red;
+    }
+    .margem{
+        margin-left: 30px;
+    }
+    .remove-bullets{
+        list-style: none;
+        /*remove os marcadores*/
+    }
+    li{
+        width: 100%;
+        height: auto;
+        background-color: skyblue;
+        margin: 2px;
+    }
+    ol{
+        width: 200px;
+        height: auto;
+        margin: 30px;
+
+    }
+    div{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: seagreen;
+        margin: 5px;
+        /*none o item será ocultado*/
+        /*inline-block o item será exibido em linha*/
+        /*list-item será exibido um atras do outro*/
+        display:list-item;
+    }
+    a{
+        width: 100%;
+        height: 20px;
+        /*block o link ou cursor hand irá percorrer todo o elemento
+        da tela, ou seja todo será clicavel*/
+        display: block;
+        border: 1px solid black;
+    }
+    /*ul cria lista desordenada sendo li cada item da lista*/
+    /*ol cria lista ordenada atraves type*/
+    /*posso ter duas classes num mesmo elemento*/
+    /*strong coloca em negrito*/
+</style>
+<body>
+    <main>
+       <h2>LISTA DESORDENADA</h2>
+       <ul class="borda margem remove-bullets">
+           <li>abc</li>
+           <li>def</li>
+           <li>ghi</li>
+           <li>mna</li>
+           <li><a href="#">Clique aqui</a></li>
+       </ul>
+       <h2>LISTA ORDENADA</h2>
+       <ol class="margem" type="I">
+        <li>abc</li>
+        <li>def</li>
+        <li>ghi</li>
+        <li>mna</li>
+        <li><a href="#">Clique aqui</a></li>
+       </ol>
+       <h2>LISTA POR DEFINIÇÃO</h2>
+       <dl>
+           <dt><strong>Fiat</strong></dt>
+           <dd>Tempra</dd>
+           <dd>Uno</dd>
+           <dt><strong>Volkswagen</strong></dt>
+           <dd style="color: red;">Fusca</dd>
+           <dd>Gol</dd>
+       </dl>
+       <div></div>
+       <div></div>
+       <div></div>
+    </main>
+</body>
+</html>

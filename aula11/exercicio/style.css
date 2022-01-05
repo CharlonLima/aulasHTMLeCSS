@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: absolute;
+    }
+.preto{
+    background-color: black;
+    z-index: 0;
+    
+}
+.vermelho{
+    background-color: red;
+    /*z-index sobrepoe um elemento acima dos outros
+    conforme o número que lhe foi atribuida*/
+    z-index: 10;
+    
+    }
+    .azul{
+        background-color: blue;
+        z-index: 0;
+        
+
+    }
+.amarelo{
+    background-color: yellow;
+    z-index: 0;
+    
+}

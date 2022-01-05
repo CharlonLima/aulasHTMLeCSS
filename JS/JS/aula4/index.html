@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4</title>
+</head>
+<script>
+    //Estrutura if
+   
+   var ano = 2000;
+   /* if verifica se uma condição é verdadeira, se for ele executa o código 
+   que está dentro das chaves, se for falsa ele pula para o código que está
+   fora da chaves neste caso FIM*/
+//    if (ano == 2021){
+//        console.log("O valor ano é igual a 2021");
+//        }
+//else é a condição que será retornada caso o if seja falso
+
+//o primeiro if verifica se a codição ano é maior ou igual a 2022 é verdadeira
+//se for verdadeira irá desviar para o segundo if que está dentro do primeiro
+//se a codição do segundo if for verdadeira irá retornar a mensagem O ano é igual a 2022
+//se a condição do segundo if for falsa ira retornar o else O ano é maior 2022
+//se a condição do primeiro if for falsa irá desviar para o ultimo else O ano é menor que 2022
+    if (ano >= 2022) {
+        if (ano == 2022) {
+            console.log("O ano é igual a 2022");
+        } else{
+            console.log("O ano é maior 2022");
+        } 
+        //console.log("O ano é maior ou igual a 2022")
+    } else {
+        console.log("O ano é menor que 2022");
+    }
+
+    //console.log("FIM");
+
+    //OPERADOR OU ||
+
+    //Verifica se UMA das condições é verdadeira se for irá desviar para
+    // o primeiro fluxo se nenhuma for verdadeira ele irá para o else
+    //Para dar falso (cair no else) com o operador OU || todas as condições devem ser falsa
+    //Se uma das condições for verdadeira irá desviar para o verdadeiro
+
+    var a = 0;
+    var b = 0;
+    var c = 0;
+    
+    if (a==2 || b==2 || c==2) {
+        console.log("Estou no primeiro fluxo");
+    }
+    else {
+        console.log("Estou no segundo fluxo");
+    }
+
+    //OPERADOR E AND &&
+    //Para que dê verdadeiro com o operador && todas condições devem
+    //ser verdadeiras se uma for falsa ele irá desviar para o falso
+
+
+    var x = 8;
+    var y = 8;
+
+    if (x == 3 && y == 3){
+        console.log("Estou no primeiro fluxo do AND");
+    } else{
+        console.log("Estou no segundo fluxo do AND");
+    }
+    //Verifica se uma condição é diferente de outra
+    if (x!=y){
+        console.log("X é diferente de Y");
+    }    else{
+            console.log("X é igual a Y")
+    }
+
+    //sobrescreve a variável anterior
+    x = 5;
+
+    //COm o switch posso criar varios case com uma determinada condição
+    // e colocar um codigo dentro desses cases se a condição for verdadeira
+    //cairá num dos cases e executará um código
+    
+    switch(x){
+        case 1: console.log("Executando a tarefa 1");
+        break;
+
+        case 2: console.log("Executando a tarefa 2");
+        break;
+
+        case 8: console.log("Executando a tarefa 8");
+        break;
+
+        case 5: 
+            var r = 3;
+            var resultado = r +x;
+            console.log(resultado);
+            if (resultado>3){
+                console.log("Valor Aceitável");
+            }   else {
+                console.log("Valor não Aceitável");
+            }
+            console.log("Fim da Operação");
+        break;
+
+        default: console.log("Essa opção não existe");
+        break;
+
+        
+    }
+    
+   
+</script>
+<body>
+    
+</body>
+</html>

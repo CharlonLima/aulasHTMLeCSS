@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#content_img{
+    /*os dois pontos ".." significa vai buscar imagem fora da página estilo*/
+    background-image: url(../imagem/laranjas-1200x675.jpg);
+    background-size: 40%;
+    /*não repete a imagem*/
+    background-repeat: no-repeat;
+    /*background-repeat: repeat-y;*/
+    border: 2px solid red;
+    width: 100%;
+    height: 600px;
+}

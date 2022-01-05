@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+article#el-pai{
+    /*porcentagem é uma unidade flexivel
+     e se adapta de acordo com o tamanho da tela
+      COM ISSO CONSEGUIMOS A RESPONSIVIDADE*/
+    width: 100vw;
+    /*para que o elemento ocupe toda a extensão do viewport
+    E SE ADAPTE DE ACORDO COM O TAMANHO DA TEL
+     utiliza vh(altura) e vw(largura) COM ISSO CONSEGUIMOS A RESPONSIVIDADE*/ 
+
+    height: 100vh;
+    padding: 5px;
+    background-color: tomato;
+    /* font-size: 20px; */
+    border: 5px solid black;
+}
+/*ESPAÇO também pode ser usado para referenciar o elemento filho*/
+/* article#el-pai p#el-filho{
+width: 100%;
+height: auto;
+background-color: blue;
+/*em significa que ele irá buscar o elemento pai mais proximo
+nesse caso especifico é 20px, e o valor encontrado é multiplicado
+ pelo pelo numero à frente do em, 1em é igual à 20px, 2em é igual à 40px
+font-size: 1em;
+} */
+article#el-pai p#el-filho{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+    /*rem significa que ele irá buscar o elemento root mais proximo
+    nesse caso especifico é html, 
+    se o tamanho da fonte html for 10px
+    o valor encontrado é multiplicado pelo pelo numero à frente do rem,
+     1rem é igual à 10px, 2rem é igual à 20px*/
+    font-size: 2rem;
+    }

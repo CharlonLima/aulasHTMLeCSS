@@ -1,0 +1,101 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+} */
+
+/* o reset abaixo foi desenvolvido por eric meyer. ele é mais completo do que o acima */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Daqui para baixo que começa o codigo. O que vem acima disso é o reset */
+.flex{
+    /*display: flex; altera a forma como o elemento é apresentado.
+    por padrão os elementos adotam display block, block inline */
+    display: flex;
+}
+.flex-center{
+    /* Aplicado sobre o elemento pai vai alinhar no centro do elemento pai o conteudo que está dentro dele*/
+    justify-content: center;
+    align-items: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: black; */
+}
+section{
+    width: 300px;
+    /* background-color: brown; */
+}
+.card-propaganda{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to bottom right, #135b96, #00897B);
+    border-radius: 100%;
+    position: relative;
+}
+/* Aperte ctrl + f5 para limpar cache do navegador */
+.preco-produto{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #00897B;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #fff;
+}

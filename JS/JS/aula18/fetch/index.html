@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- fetch faz uma requisição http -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+window.onload = function(){
+    //http://viacep.com.br/ws/87114595/json busca o cep informado no servidor
+    //e retorna as informações do endereço como cep, logradouro, complemento, bairro,
+    //e esses nomes:cep, logradouro, complemento, bairro, etc. podem ser usados nos campos do html
+    //Nesse caso em especifico, estamos utilizando o nome logradouro no campo id do input:
+    //<input type="text" name="" id="logradouro"> para retornar o nome da rua no formulário
+    //Ou seja ele irá encontrar o campo logradouro no resultado do via cep e escrever no input no da rua
+
+
+
+    //Mapea os elementos do html
+    const cep_ = document.querySelector("#numeroCep");
+    const btnBuscar = document.querySelector("#buscarCep");
+
+
+    //a função abaixo faz a requisição para busca de cep (por isso tem async)
+    //A função abaixo pode ser chamada pelo nome da variável dadosCep(NomeroCep)
+    //o que for digitado dentro da chamada da função irá para o parametro cep da função
+    //e irá cair na url http://viacep.com.br/ws/${cep}/json`
+    let dadosCep = async function(cep){
+        //O que estiver no parametro cep será colocado na url para buscar o endereço.
+        //a url já com o cep incluído/substituido será armazenamento na variavel url
+        let url = `http://viacep.com.br/ws/${cep}/json`;
+        //console.log(url);
+        try{ 
+        //await para o aguardar enquanto o fetch faz a requisição do url que foi armazenado na
+        //variavel url
+        let dadosFetch = await fetch(url);
+        //Feita a requisição, nós capturamos o arquivo json, que será igual a esse:
+        //         {
+        //   "cep": "87114-595",
+        //   "logradouro": "Avenida Anchieta",
+        //   "complemento": "de 930/931 ao fim",
+        //   "bairro": "Residencial São José",
+        //   "localidade": "Sarandi",
+        //   "uf": "PR",
+        //   "ibge": "4126256",
+        //   "gia": "",
+        //   "ddd": "44",
+        //   "siafi": "8461"
+        // }
+        //O qual será armazenado na váriavel dadosJson
+        let dadosJson = await dadosFetch.json();
+        //console.log(dadosJson);
+        resultadoCep(dadosJson); // Chama a função resultadoCep e coloca no parametro dadosEnderecoCep
+        //o que estiver armazenado na variavel dadosJson que é o arquivo json:
+        //         {
+        //   "cep": "87114-595",
+        //   "logradouro": "Avenida Anchieta",
+        //   "complemento": "de 930/931 ao fim",
+        //   "bairro": "Residencial São José",
+        //   "localidade": "Sarandi",
+        //   "uf": "PR",
+        //   "ibge": "4126256",
+        //   "gia": "",
+        //   "ddd": "44",
+        //   "siafi": "8461"
+        // }
+        } catch(error){alert(error);}
+    }
+    //dadosCep('87114595');Chama a função //Se descomentar esse descomente também o console.log
+
+
+
+    btnBuscar.addEventListener('click', function(){
+        //chama a função dadosCep, quando o botao for clicado, e coloca o cep 
+        // que foi digitado no formulario
+        dadosCep(cep_.value); //chama a função dadosCep. O que está dentro dos parenteses
+        //é o que será aplicado no parametro cep da função dadosCep que é cep digitado
+    })
+
+
+    
+    //A função abaixo faz com que o nome do logradouro que vem da requisição do site viacep seja colocado no formulario
+    //Ela apenas recebe informações por isso não tem async
+    //O parametro dessa função que é dadosEnderecoCep vai receber o arquivo json
+    //que está armazenado na variável dadosJson da função dadosCep:
+    //         {
+        //   "cep": "87114-595",
+        //   "logradouro": "Avenida Anchieta",
+        //   "complemento": "de 930/931 ao fim",
+        //   "bairro": "Residencial São José",
+        //   "localidade": "Sarandi",
+        //   "uf": "PR",
+        //   "ibge": "4126256",
+        //   "gia": "",
+        //   "ddd": "44",
+        //   "siafi": "8461"
+        // }
+    //Nela vamos verificar se os nomes que vem no arquivo json coincide com nome do id que
+    //foi inserido no input que é 'logradouro', se coincidir ela vai preencher o formulário com o
+    //nome da rua
+    function resultadoCep (dadosEnderecoCep){
+        //Relembrando, o que está caindo no parametro dadosEnderecoCep é o que está
+        //Na variável dadosJson que é o arquivo json:
+        //         {
+        //   "cep": "87114-595",
+        //   "logradouro": "Avenida Anchieta",
+        //   "complemento": "de 930/931 ao fim",
+        //   "bairro": "Residencial São José",
+        //   "localidade": "Sarandi",
+        //   "uf": "PR",
+        //   "ibge": "4126256",
+        //   "gia": "",
+        //   "ddd": "44",
+        //   "siafi": "8461"
+        // }
+        //console.log(dadosEnderecoCep);
+        //O for irá percorrer o arquivo json em busca do logradouro(que é o que nós pedimos)
+        //COmo se trata arquivo json usa o in
+        for( let campo in dadosEnderecoCep){
+            console.log(campo);
+            //o if vai ver se no json tem campo chamado logradouro(que é o que nós pedimos)
+            if(document.querySelector(`#${campo}`)){
+                //Se sim ele vai preencher
+                document.querySelector(`#${campo}`).value=dadosEnderecoCep[campo];
+                
+            }
+        }
+    }
+
+
+}
+
+</script>
+<body>
+    <input type="text" name="" placeholder="Digite um cep válido!" id="numeroCep">
+    <!-- Esse id=logradouro não tem a mesma função ou objetivo
+    que aprendemos no html/css, leia o primeiro comentario lá em cima -->
+    <input type="text" name="" id="logradouro"> 
+    <input type="button" name="buscar" id="buscarCep" value="BUSCAR">
+</body>
+</html>

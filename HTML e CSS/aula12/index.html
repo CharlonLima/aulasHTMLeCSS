@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*#pai>#filha significa que a tag div filha
+     pertence(está dentro do conteiner da tag div pai)
+     logo todos os parametros aplicados a tag pai será aplicado a tag filha*/
+    #pai>#filha{
+        /*o que esta sendo renderizado é elemento  filha*/
+width: 100px;
+height: 100px;
+background-color: green;
+border: 1px solid black;
+    }
+</style>
+<body>
+    <div id="pai">
+        <div id="filha">
+FILHO
+        </div>
+    </div>
+</body>
+</html>

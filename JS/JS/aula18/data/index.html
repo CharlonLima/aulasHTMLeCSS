@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+
+    let diaSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+
+    //Date retorna a data completa
+    let data = new Date;
+    //console.log(data);
+    //getDate retorna apenas o dia da data em numeros
+    //console.log(data.getDate());
+    //getMonth retorna o mÊs do array em numero
+    //console.log(data.getMonth());
+    //Voce pode usar o numero do mês que a função getMonth retorna
+    //Para usar como parametro na posição pra retorna o nome do mÊs
+    //console.log(meses[data.getMonth(data)]);
+    //getDay retorna a posição do dia na semana(Segunda=1, Terça=2, Quarta =3, etc)
+    //console.log(data.getDay());
+    //Voce pode usar o numero do dia da semana que a função getDay retorna
+    //Para usar como parametro na posição pra retorna o nome do dia da semana
+    console.log(`Hoje é o dia ${diaSemana[data.getDay()]} do mês de ${meses[data.getMonth()]} do ano de ${data.getFullYear()}`);
+    //getFullYear retorna o ano em numero com 4 digitos
+    //toLocaleString já foi mencionada antes formata moedas e datas
+    let dataFormatada = data.toLocaleString('pt-br', {year: 'numeric', month: '2-digit', day: '2-digit'});
+    console.log(dataFormatada);
+    //getHours o valor das horas
+    //getMinutes traz os minutos informados
+</script>
+<body>
+    
+</body>
+</html>

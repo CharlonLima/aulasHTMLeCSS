@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula20</title>
+</head>
+<style>
+/*form cria um formulário, fieldset cria um preenchimento para o formulario
+legend cria um titulo para o formulario,
+ label cria um texto que aparece do lado
+do formulario, input  text cria um caixa para inserir os dados,
+ input submit cria botão*/
+ /*quando crio id para o input e coloco esse id no for do label
+ isso fara que quando o usuario clicar no texto do label o cursor
+ do mouse irá para o formulario ou selecionará radio botão ou checkbox*/
+ /*input radio cria botão redondo que dá opção para selecionar se voce
+ colocar o mesmo name eles pertencerão ao mesmo grupo e quando selecionar
+ um desmarcará o outro*/
+ /*checkbox eu posso selecionar quantos eu quiser ao mesmo tempo
+ diferente do radio buttom que seleciona um ou outro*/
+ /*select cria lista com varias opções
+ pré definidas para o usuário selecionar, sendo option onde definiremos as
+ opções que irão aparecer*/
+ /*textarea cria um campo para edição cols numero de coluna rows é linha*/
+ /*placeholder é lembrete que aparece no fundo do elemento*/
+ /*required o preenchimento do item é obrigatório*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    width: 80%;
+    height: auto;
+}
+ section#formulario{
+margin: 30px auto;
+padding: 5px;
+
+}
+form{
+    width: 100%;
+    height: auto;
+    padding: 2px;
+}
+label{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2px;
+}
+.txt{
+    width: 100%;
+    height: 30px;
+}
+fieldset{
+    padding: 2px;
+    border: none;
+}
+</style>
+<body>
+    <section id="formulario">
+   <form method="post" name="cadastro">
+     <fieldset>
+         <legend>Cadastro de Usuário</legend>
+        <label for="nomeUsu">Nome</label>
+        <input type="text" required placeholder="Digite seu nome" class="txt" id="nomeUsu" name="nomeUsu" value="">
+        <label for="sobreNome" >Sobre Nome</label>
+        <input type="text" class="txt" id="sobreNome" name="sobreNome" value="">
+        <label for="dataNasUso">Data de Nascimento</label>
+        <input type="text" class="txt" id="dataNasUso" name="dataNasUso" value="">
+        
+    </fieldset>
+    <fieldset>
+        <legend>Sexo</legend>
+        <label>Masculino</label>
+    <input type="radio" name="genero" value="m">
+    <label>Feminino</label>
+    <input type="radio" name="genero" value="f">
+    </fieldset>
+    <fieldset>
+        <legend>Preferências de Estudo</legend>
+        <label for="php">PHP</label>
+        <input type="checkbox" id="php" name="php" value="php">
+        <label for="js">JAVASCRIPT</label>
+        <input type="checkbox" id="js" name="js" value="js">
+        <label for="html_css">HTML_CSS</label>
+        <input type="checkbox" id="html_css" name="html_css" value="html_css">
+    </fieldset>
+    <fieldset>
+    <select name="" id="">
+        <option value="">Selecione</option>
+        <option value="junior">Júnior</option>
+        <option value="senior">Senior</option>
+        <option value="master">Plus Plus Master</option>
+</select>
+</fieldset>
+<fieldset>
+<label for="edicao">Escreva mais sobre você</label>
+<textarea name="" id="edicao" cols="80" rows="10"></textarea>
+</fieldset>
+<input type="submit" name="enviarDados" value="ENVIAR">
+   </form>
+</section>
+</body>
+</html>
