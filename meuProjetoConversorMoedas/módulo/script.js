@@ -16,10 +16,10 @@ window.onload = function () {
                 moedaEstrangeira.value = resultado.toFixed(2);
             }
             moedaEstrangeira.style.backgroundColor = 'blue';
-            moedaEstrangeira.style.transition = '1s';
             moedaEstrangeira.style.color = 'white';
         } else{
             alert("Digite um valor no primeiro formulário para converter!");
+            real.style.backgroundColor = 'orange';
         }
             
     });
@@ -34,14 +34,19 @@ window.onload = function () {
                 let resultado = Number(real.value) / Number(valorEuro);
                 moedaEstrangeira.value = resultado.toFixed(2);
             }
-            moedaEstrangeira.style.backgroundColor = 'green';
+            moedaEstrangeira.style.backgroundColor = 'black'
             moedaEstrangeira.style.transition = '1s';
             moedaEstrangeira.style.color = 'white';
         } else{
             alert("Digite um valor no primeiro formulário para converter!");
+            real.style.backgroundColor = 'orange';
         }
             
     });
+
+    real.addEventListener('click', function(){
+        real.style.backgroundColor = 'white';
+    })
 
     clean.addEventListener('click', function () {
         real.value = "";

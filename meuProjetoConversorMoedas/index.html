@@ -8,16 +8,15 @@
     <script src="módulo/script.js"></script>
     <title>Conversor de Moedas</title>
 </head>
-<body>
+<body class="flex">
     <figure>
         <img id="imagem" src="imagem/maxresdefault-1-1.jpg" alt="">
     </figure>
-    <h1 class="tipoEtamanhoFonte">Converta reais em Dólar, Euro,</h1>
-    <div id="conteiner">
+    <div id="conteiner" class="flex">
         <input class="tipoEtamanhoFonte" placeholder="Digite o valor em Reais" type="number" id="real">
         <input class="tipoEtamanhoFonte" disabled placeholder="Quanto consegue comprar de Dólar ou Euro" type="number" id="moedaEstrangeira">
     </div>
-    <div id="conteinerBotoes">
+    <div id="conteinerBotoes" class="flex">
        <input id="dolar" class="tipoEtamanhoFonte" type="button" value="USD - Dólar">
        <input id="euro" class="tipoEtamanhoFonte" type="button" value="EUR - Euro">
        <input class="tipoEtamanhoFonte" id="clean" type="button" value="Limpar Tudo">
