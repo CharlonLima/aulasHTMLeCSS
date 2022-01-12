@@ -1,4 +1,4 @@
-window.onload = function () {
+function conversorMoeda () {
     const real = document.querySelector("#real");
     const moedaEstrangeira = document.querySelector("#moedaEstrangeira");
     const dolar = document.querySelector("#dolar");
@@ -24,9 +24,7 @@ window.onload = function () {
             }
         } catch(error){
             alert("Não foi possível se conectar com o servidor. Tente novamente mais tarde.");
-        }
-        
-            
+        }    
     });
 
     euro.addEventListener('click', async function () {
@@ -49,9 +47,7 @@ window.onload = function () {
             }
         } catch(error){
             alert("Não foi possível se conectar com o servidor. Tente novamente mais tarde.");
-        }
-        
-            
+        }   
     });
 
     real.addEventListener('click', function(){
@@ -64,3 +60,5 @@ window.onload = function () {
         moedaEstrangeira.style.backgroundColor = 'white';
     });
 }
+
+export{conversorMoeda};
