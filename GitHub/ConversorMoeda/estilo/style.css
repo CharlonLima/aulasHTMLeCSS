@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 16px;
+}
+body{
+    width: auto;
+    height: 100vh;
+    background: linear-gradient(#10e91b, #6efa75, #10e91b);
+    flex-direction: column;
+}
+#conteiner{
+    width: 60%;
+    height: 40%;
+    /* background-color: blue; */
+    flex-direction: column;
+    position: relative;
+}
+#real{
+    width: 65%;
+    height: 30%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    display: flex;
+    text-align: center; 
+}
+#moedaEstrangeira{
+    width: 65%;
+    height: 30%;
+    text-align: center;
+    background-color: rgb(218, 218, 218);
+}
+#conteinerBotoes{
+    width: 60%;
+    height: 40%;
+    /* background-color: orchid; */
+    position: relative;
+}
+input{
+    width: 20%;
+    height: 20%;
+    margin-right: 2px;
+    cursor: pointer;
+}
+#clean{
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    bottom: 10px;
+    background-color: orange;
+}
+#clean:hover{
+    background-color: red;
+    transition: 1s;
+}
+figure{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+#imagem{
+    width: 100%;
+    height: 100%;
+}
+#dolar:hover{
+    background: linear-gradient(#ec2926, #ffffff, #2b4bff);
+}
+#euro:hover{
+    background: linear-gradient(#212121, #E53935, #FDD835);
+}
+.tipoEtamanhoFonte{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.5rem, 1.7vw,2.5rem);
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div, input{
+    border-radius: 10px;
+}

@@ -6,7 +6,8 @@ window.onload = function () {
     const clean = document.querySelector("#clean");
     
     dolar.addEventListener('click', async function () {
-        if(real.value != ""){
+        try{
+            if(real.value != ""){
             let site = "https://economia.awesomeapi.com.br/json/USD-BRL";
             let dadosFetch = await fetch(site);
             let dadosJson = await dadosFetch.json();
@@ -20,12 +21,17 @@ window.onload = function () {
         } else{
             alert("Digite um valor no primeiro formulário para converter!");
             real.style.backgroundColor = 'orange';
+            }
+        } catch(error){
+            alert("Não foi possível se conectar com o servidor. Tente novamente mais tarde.");
         }
+        
             
     });
 
     euro.addEventListener('click', async function () {
-        if(real.value != ""){
+        try{
+            if(real.value != ""){
             let site = "https://economia.awesomeapi.com.br/json/EUR-BRL";
             let dadosFetch = await fetch(site);
             let dadosJson = await dadosFetch.json();
@@ -40,7 +46,11 @@ window.onload = function () {
         } else{
             alert("Digite um valor no primeiro formulário para converter!");
             real.style.backgroundColor = 'orange';
+            }
+        } catch(error){
+            alert("Não foi possível se conectar com o servidor. Tente novamente mais tarde.");
         }
+        
             
     });
 
