@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seta animada</title>
+</head>
+<style>
+    body{
+        
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+svg{
+    width: 200px;
+    /* para ter efeitos diferentes altere ease, ease-in, ease-out, ease-in-out */
+    animation: is-bouncing 1s ease-in-out alternate infinite;
+}
+/* is-bouncing está pulando */
+@keyframes is-bouncing {
+    to{
+        transform: translateY(30px);
+    }
+}
+</style>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 490.656 490.656"><path d="M487.536 120.445c-4.16-4.16-10.923-4.16-15.083 0L245.317 343.581 18.203 120.445c-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.0831234.667c2.069 2.091 4.8 3.136 7.531 3.136s5.461-1.045 7.552-3.1151234.667-234.667a10.7 10.7 0 00-, 001-15.104z"/></svg>
+</body>
+</html>

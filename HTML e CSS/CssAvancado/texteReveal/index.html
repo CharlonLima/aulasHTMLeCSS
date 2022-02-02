@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reveal</title>
+</head>
+<style>
+body{
+    display: grid;
+    font-family: sans-serif;
+    font-size: 300%;
+    place-items: center;
+    height: 100vh;
+    /* Para entender como funciona, basta ocultar este background 
+    Tudo que acontece é que um box passa por cima do texto 
+    e depois que o box passa, o texto é exibido */
+    background-color: blue;
+}
+.text-reveal{
+    
+    overflow: hidden;
+    position: relative;
+    
+}
+.text-reveal::after{
+        /* mostra o box */
+        animation: text-reveal 1s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+        width: 600px;
+        height: 200px;
+        background-color: blue;
+        display: block;
+        position: absolute;
+        bottom:0;
+        top:0;
+        right:0;
+        left:0;
+        content: '';
+    }
+    h1{
+        /* fade é nome da animação, 
+        1ms é a duração da animação de mostrar texto
+        e 0.5s é o delay(é o tempo de espera para mostrar texto)
+         para dar tempo do box apacerer
+         e ser recolhido para depois mostrar o texto */
+        /* o tempo de delay fica metade do tempo para 
+        mostrar o texto */
+        animation: fade 1ms 0.5s forwards;
+        opacity: 0;
+    }
+@keyframes text-reveal {
+    from {
+        transform: translateX(-101%);
+    }
+    to{
+        transform: translateX(101%);
+    }
+}
+@keyframes fade {
+    to{
+        opacity: 1;
+    }
+}
+</style>
+<body>
+    <div class="text-reveal">
+        <h1>Text Reveal</h1>
+    </div>
+</body>
+</html>

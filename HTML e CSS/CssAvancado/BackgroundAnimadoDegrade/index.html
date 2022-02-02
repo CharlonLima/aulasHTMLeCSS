@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background Animado</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+body{
+    animation: gradient 10s ease alternate infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 300% 300%;
+    /* para entender exatamente o que esta acontecendo, altere o tamanho do background-size: 30% 300% 
+    a animação fica indo de um lado para outro com a position*/
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+    font-size: 100%;
+}
+@keyframes gradient {
+    /* no inicio na animação o eixo x vai ficar em 0% e no eixo y em 50% */
+    from {
+        background-position: 0 50%;
+    }
+    /* no fim da animação o eixo x vai ficar em 100% e no eixo y em 50% */
+    to {
+        background-position: 100% 50%;
+    }
+}
+</style>
+<body>
+    <h1>Animação Degradê</h1>
+</body>
+</html>

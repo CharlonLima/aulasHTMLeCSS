@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Anvançado</title>
+</head>
+<style>
+body{
+    margin: 30px;
+}
+.box{
+    /* outline coloca uma borda ao redor da div */
+    /* outline: 5px solid red; */
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    /* transition-property permite escolher qual propriedade sera 
+    alterada NA TRANSIÇÂO background, border, etc Nesse caso o background terá 
+    um tempo de transição de 2 segundos*/
+    /* transition-property: background-color, border-radius; */
+
+    /* transition-duration: 2s, 5s; quando tem varios elementos
+    na transition-property pode definir tempo de duraçao pra o proximo elemento */
+    /* transition-duration: 2s, 1.5s; */
+
+    /* transition-delay: 1s; define um tempo de espera para ocorrer a animação depois da ação acontecer
+    por exemplo passar o mouse, e executar os efeitos */
+    /* transition-delay: 1s; */
+
+    /* transition-timing-function ease-in suaviza efeito quando coloca o mouse no inicio da animação 
+    ease-out suaviza no fim da animação quando tira o mouse, ease-in-out junta os dois */
+    /* transition-timing-function: ease-in-out; */
+
+    /* transition-timing-function: cubic-bezier(.15, .89, .85, .26); executa a animação em etapas de tempo definidas 
+    por exemplo nesse caso inicio acelerado, meio mais lento, e fim acelerado */
+    /* transition-timing-function: cubic-bezier(.15, .89, .85, .26); */
+}
+/* .box:hover{
+    background-color: orange;
+    border-radius: 50%;
+} */
+/* translate desloca um objeto em relação ao outro, 
+    1º valor no eixo X no sentido horizontal e o segundo valor
+    no eixo Y no sentido vertical, -para esquerda ou para cima/ + para direita para baixo */
+    /* transform: translate(300px, -20px); */
+    /*scale dimensiona o tamanho de uma imagem para maior ou menor
+    scaleX só no eixo X e scaleY só no eixo Y, só scale faz em ambos os lados*/
+    /* transform: scaleX(2); */
+    /* transform: rotate(45deg); gira um objeto, + no sentido horario,
+    -no sentido anti horario, pode usar a unidade turn 0.5turn(meia volta) */
+    /* transform: rotate(45deg); */
+    /* transform: skew(-20deg); dá uma enclinada-esticada no objeto 
+    pode ser positivo para esquerda -para direita */
+    /* transform: skew(20deg); */
+    /* transform: translateX(100px) scale(1.5) rotate(-15deg); pode combinar tudo para gerar efeitos */
+    /* transform: translateX(100px) scale(2) rotate(-15deg); */
+</style>
+<body>
+    <div class="box">
+        <!-- <img src="imagem/bandeira brasil redonda png - Fundo transparente grátis.png" alt=""> -->
+    </div>
+</body>
+</html>
