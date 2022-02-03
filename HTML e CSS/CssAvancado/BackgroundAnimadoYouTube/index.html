@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Animado YouTube</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #262626;
+    }
+    .conteiner{
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        /* Cria reflexo do box, below porque é abaixo */
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, transparent, #0004);
+    }
+    .conteiner .box{
+        position: relative;
+        width: 320px;
+        height: 400px;
+        margin: 40px 20px;
+        border-radius: 20px;
+        /* 45 deg define a curvatura do background, 
+        são utilizadas dois tipos de cores e é definido uma porcentagem
+        que é o espaço que ela irá ocupar no background. */
+        background: linear-gradient(45deg, #2da2ff 25%, #444 25%, #444 50%, #2da2ff 50%, #2da2ff 75%, #444 75%, #444 100%);
+        /* Define o tamanho de cada cor no background */
+        background-size: 40px 40px;
+        /* Filtra o cor do background para cinza */
+        filter:grayscale(1);
+        animation: animateBg 0.5s linear infinite;
+        /* Inicialmente a animação fica pausada */
+        animation-play-state: paused;
+        /* Gera um efeito quando o mouse é removido e ele volta para a cor cinza */
+        transition: filter 1s;
+        display: flex;
+        justify-content: center;
+
+    }
+    /* :nth-child(2) estabelece algumas formatações diferentes
+    apenas para o segundo elemento */
+    .conteiner .box:nth-child(2){
+        /* 45 deg define a curvatura do background, 
+        são utilizadas dois tipos de cores e é definido uma porcentagem
+        que é o espaço que ela irá ocupar no background. */
+        background: linear-gradient(135deg, #ff61ae 25%, #444 25%, #444 50%, #ff61ae 50%, #ff61ae 75%, #444 75%, #444 100%);
+        /* Define o tamanho de cada cor no background */
+        background-size: 40px 40px;
+    }
+    .conteiner .box:hover{
+        /* Quando o mouse passa por cima, ela começa a rodar */
+        animation-play-state: running;
+        /* E o filtro de cor cinza é removido, exibindo as cores do background */
+        filter: grayscale(0);
+    }
+    @keyframes animateBg {
+        0%{
+            background-position: 0;
+        }
+        100%{
+            /* 40px é tamanho do background size */
+            background-position: 40px;
+        }
+    }
+    .conteiner .box img{
+        position: absolute;
+        bottom: 0;
+        height: 90%;
+        transition: 0.5s;
+    }
+    /* Colocou um hover na classe box,
+     porém o efeito irá ocorrer no img que está dentro da classe, 
+     irá aumentar a altura da imagem */
+    .conteiner .box:hover img{
+        height: 480px;
+    }
+</style>
+<body>
+    <div class="conteiner">
+        <div class="box">
+            <img src="imagens/img1.png" alt="">
+        </div>
+        <div class="box">
+            <img src="imagens/img2.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
